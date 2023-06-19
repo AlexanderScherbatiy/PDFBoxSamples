@@ -52,7 +52,7 @@ public class PDFBoxListFonts {
 
                 awtFont.canDisplay(1);
                 if (!fontFamily.equals(awtFont.getFamily())) {
-                    System.out.printf("The font can't be displayed! It is substituted to %s by AWT system.%n", awtFont);
+                    System.out.printf("The font can't display some characters! It is substituted to %s by AWT system.%n", awtFont);
                 }
             }
         }
