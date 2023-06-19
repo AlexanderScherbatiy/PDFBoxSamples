@@ -49,6 +49,11 @@ public class PDFBoxListFonts {
 
                 String fontFamily = awtFont.getFamily();
                 System.out.printf("%s [font family is %s]%n", awtFont, fontFamily.isEmpty() ? "empty" : "set");
+
+                awtFont.canDisplay(1);
+                if (!fontFamily.equals(awtFont.getFamily())) {
+                    System.out.printf("The font can't be displayed! It is substituted to %s by AWT system%n", awtFont);
+                }
             }
         }
     }
